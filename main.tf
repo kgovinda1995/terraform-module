@@ -35,7 +35,7 @@ module "webserver" {
     availability_zone = var.availability_zone
     environment = var.environment
     instance_type = var.instance_type
-    subnet_id = modules.my-subnet.subnet-out-1.id
+    subnet_id = module.my-subnet.subnet-out-1.id
     public_key_location = var.public_key_location
     private_key_location = var.private_key_location
     image_name = var.image_name

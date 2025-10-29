@@ -1,11 +1,6 @@
 output "aws-vpc-id" {
     value = aws_vpc.stage-vpc.id
 }
-
-output "aws-subnet-id-1" {
-    value = aws_subnet.sub-stage-1.id
-}
-
 output "aws-subnet-id-2" {
     value = aws_subnet.sub-stage-2.id   
 }
