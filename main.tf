@@ -30,7 +30,7 @@ module "my-subnet" {
 
 module "webserver" {
     source = "./modules/webserver"
-    vpc_id = var.vpc_cidr_block
+    vpc_id = aws_vpc.stage-vpc.id
     my_ip  = var.my_ip
     availability_zone = var.availability_zone
     environment = var.environment
