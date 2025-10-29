@@ -38,6 +38,7 @@ module "webserver" {
     subnet_id = modules.my-subnet.subnet-out-1.id
     public_key_location = var.public_key_location
     private_key_location = var.private_key_location
+    image_name = var.image_name
 }
 
 
