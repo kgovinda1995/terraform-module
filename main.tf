@@ -21,7 +21,7 @@ resource "aws_vpc" "stage-vpc" {
   
 }*/
 module "my-subnet" {
-   source = "/modules/subnet"
+   source = "./modules/subnet"
    vpc_id = aws_vpc.stage_vpc.id
    subnet_cidr_block = var.subnet_cidr_block
    availability_zone = var.availability_zone
@@ -30,16 +30,14 @@ module "my-subnet" {
 
 module "webserver" {
     source = "/modules/webserver"
-    vpc_id = var.vpc_id
+    vpc_id = var.vpc_cidr_block
     my_ip  = var.my_ip
     availability_zone = var.availability_zone
     environment = var.environment
     instance_type = var.instance_type
-    subnet_id = modules.webserver.subnet.id
+    subnet_id = modules.my-subnet.subnet-out-1.id
     public_key_location = var.public_key_location
     private_key_location = var.private_key_location
-
-  
 }
 
 
