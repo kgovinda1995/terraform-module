@@ -29,7 +29,7 @@ module "my-subnet" {
 }
 
 module "webserver" {
-    source = "/modules/webserver"
+    source = "./modules/webserver"
     vpc_id = var.vpc_cidr_block
     my_ip  = var.my_ip
     availability_zone = var.availability_zone
