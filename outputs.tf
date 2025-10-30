@@ -5,7 +5,7 @@ output "subent-1-id" {
     value = module.vpc.public_subnets[0]
 }
 
-output "subent-1-id" {
+output "subent-2-id" {
     value = module.vpc.public_subnets[1]
 }
 
