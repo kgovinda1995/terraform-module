@@ -22,7 +22,7 @@ output "aws-ami-id" {
 }
 
 output "aws-instance-id" {
-    value = module.webserver.aws-instance-ids
+    value = module.webserver.aws-instance-id
 }
 
 output "aws-ec2-public-ip" {
