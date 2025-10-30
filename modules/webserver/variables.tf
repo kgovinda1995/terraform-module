@@ -7,3 +7,4 @@ variable subnet_id {}
 variable public_key_location {}
 variable private_key_location {}
 variable image_name {}
+variable instance_type {}

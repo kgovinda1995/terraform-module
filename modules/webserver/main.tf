@@ -29,9 +29,6 @@ resource "aws_security_group" "stage-sg" {
     }
   
 }
-data "aws_vpc" "existing-vpc" {
-   default = true
-}
 data "aws_ami" "latest-ubuntu-image" {
     most_recent = true
     owners = [ "amazon" ]
