@@ -57,7 +57,7 @@ resource "aws_key_pair" "my-terraform-1" {
    public_key = file(var.public_key_location)
   
 }
-resource "aws_instance" "stage-server" {
+resource "aws_instance" "stage-server-1" {
     ami = data.aws_ami.latest-ubuntu-image.id
     instance_type = var.instance_type[0] 
 
@@ -85,7 +85,7 @@ resource "aws_instance" "stage-server" {
 # user_data = file("entry-script.sh") 
 
    provisioner "file" {
-       source = "./modules/entry-script.sh"
+       source = "./modules/webserver/entry-script.sh"
        destination = "/home/ubuntu/entry-script-on-ubuntu.sh"
  }
      provisioner "remote-exec" {
