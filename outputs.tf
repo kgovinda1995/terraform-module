@@ -4,7 +4,7 @@ output "aws-vpc-id" {
 output "subent-1-id" {
     value = module.my-subnet.subnet-out-1.id
 }
-output "subent-1-id" {
+output "subent-2-id" {
     value = module.my-subnet.subnet-out-2.id
 }
 output "aws-internet-gateway" {
