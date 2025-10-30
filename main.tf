@@ -11,7 +11,7 @@ module "vpc" {
 
   azs  = [var.availability_zone]
   
-  public_subnets  = [var.subnet_cidr_block]
+  public_subnets  = var.subnet_cidr_block
 
   public_subnet_tags = { Name = "${var.environment}-sub-1"}
 

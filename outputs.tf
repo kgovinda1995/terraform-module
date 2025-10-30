@@ -1,19 +1,21 @@
 output "aws-vpc-id" {
-    value = aws_vpc.stage-vpc.id
+    value = module.vpc.vpc_id
 }
 output "subent-1-id" {
-    value = module.my-subnet.subnet-out-1.id
+    value = module.vpc.public_subnets[0]
 }
-output "subent-2-id" {
-    value = module.my-subnet.subnet-out-2.id
+
+output "subent-1-id" {
+    value = module.vpc.public_subnets[1]
 }
+
 output "aws-internet-gateway" {
-    value = module.my-subnet.aws-internet-gateway
+    value = module.vpc.public_internet_gateway_route_id
   
 }
 
 output "stage-rtb" {
-    value = module.my-subnet.stage-rtb
+    value = module.vpc.public_route_table_ids
   
 }
 
