@@ -1,3 +1,12 @@
+terraform {
+  required_version = "value"
+  backend "s3" {
+   bucket  = "terrform-bucket"  # bucket need to create
+   key = "myapp/state.tfstate"
+    
+  }
+}
+
 provider "aws" {
     region = "ap-south-1"
     access_key = "AKIAZ3OZYLMB3VYYP7MS"
