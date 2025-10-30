@@ -8,21 +8,21 @@ output "subent-2-id" {
     value = module.my-subnet.subnet-out-2.id
 }
 output "aws-internet-gateway" {
-    value = module.my-subnet.aws-internet-gateway.id
+    value = module.my-subnet.aws-internet-gateway
   
 }
 
 output "stage-rtb" {
-    value = module.my-subnet.stage-rtb.id
+    value = module.my-subnet.stage-rtb
   
 }
 
 output "aws-ami-id" {
-    value = module.webserver.aws-ami-id.id
+    value = module.webserver.aws-ami-id
 }
 
 output "aws-instance-id" {
-    value = module.webserver.aws-instance-id.id
+    value = module.webserver.aws-instance-ids
 }
 
 output "aws-ec2-public-ip" {
