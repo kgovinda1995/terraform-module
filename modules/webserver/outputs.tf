@@ -4,9 +4,9 @@ output "aws-ami-id" {
 }
 
 output "aws-instance-id" {
-    value = aws_instance.stage-server.id
+    value = aws_instance.stage-server-1.id
 }
 
 output "aws-ec2-public-ip" {
-    value = aws_instance.stage-server.public_ip
+    value = aws_instance.stage-server-1.public_ip
 }
