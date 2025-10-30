@@ -59,7 +59,7 @@ resource "aws_key_pair" "my-terraform-1" {
 }
 resource "aws_instance" "stage-server-1" {
     ami = data.aws_ami.latest-ubuntu-image.id
-    instance_type = var.instance_type
+    instance_type = [ var.instance_type ]
 
     subnet_id = var.subnet_id
     vpc_security_group_ids = [ aws_security_group.stage-sg.id ]
